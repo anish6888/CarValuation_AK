@@ -1,6 +1,5 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +31,7 @@ public class CarValuationPage {
         driver.get("https://car-checking.com");
     }
 
-    public Map<String, String> searchCarDetails(List<String> registrationNumbers) throws InterruptedException {
+    public Map<String, String> searchCarDetails(List<String> registrationNumbers) {
         Map<String, String> carDetails = new HashMap<>();
         for (String regNumber : registrationNumbers) {
             driver.findElement(enterReg).clear();
